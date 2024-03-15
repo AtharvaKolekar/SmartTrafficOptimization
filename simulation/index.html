@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Traffic Optimization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+</head>
+<body>
+    <div id="main">
+
+        <div class="road">
+            <div class="layer">
+                <div class="block a">
+                    <button  onclick="startAmbulance('A')">Ambulance Here</button>
+                    <h1 id="timerA" class="timer">35</h1>
+                    <div class="traffic-light-y">
+                        <div class="cicle" id="A3"></div>
+                        <div class="cicle" id="A2"></div>
+                        <div class="cicle" id="A1"></div>
+                    </div>
+                    
+                </div>
+                <div class="block b">
+                    <button id="playBtn">Play/ Ambulance crossed</button>
+                    <div class="traffic-light-x">
+                        <div class="cicle" id="B1"></div>
+                        <div class="cicle" id="B2"></div>
+                        <div class="cicle" id="B3"></div>
+                    </div>
+                    <h1 id="timerB" class="timer">35</h1>
+                    <button  onclick="startAmbulance('B')">Ambulance Here</button>
+                </div>
+            </div>
+            <div class="layer">
+                <div class="xline"></div>
+                <div class="yline"></div>
+                <img id="moving-image" src="amb.png" alt="Moving Image" width="140" height="120">
+            </div>
+            <div class="layer">
+                <div class="block c">
+                    <button onclick="moveImage(); startAmbulance('C')">Ambulance Here</button>
+                    <h1 id="timerC" class="timer">35</h1>
+                    <div class="traffic-light-x">
+                        <div class="cicle" id="C3"></div>
+                        <div class="cicle" id="C2"></div>
+                        <div class="cicle" id="C1"></div>
+                    </div>
+                </div>
+                <div class="block d">
+                    <div class="traffic-light-y">
+                        <div class="cicle" id="D1"></div>
+                        <div class="cicle" id="D2"></div>
+                        <div class="cicle" id="D3"></div>
+                    </div>
+                    <h1 id="timerD" class="timer">35</h1>
+                    <button  onclick="startAmbulance('D')">Ambulance Here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+
+</html>

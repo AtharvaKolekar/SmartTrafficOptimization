@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: fill-available;
+    height: -webkit-fill-available;
+}
+body {
+    font-family: sans-serif;
+    min-height: 100svh;
+    min-height: fill-available;
+    min-height: -webkit-fill-available;
+    background-color: #F9F9F9;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+#main{
+position: relative;
+}
+
+.road{
+    background-color: #333;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.layer{
+    display: flex;
+    flex-direction: row;
+    min-height: 150px;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.block{
+    width: 40%;
+    height: 250px;
+    padding: 30px;
+    background-color: #9bdd4b;
+    display: flex;
+    border: 10px #eee solid;
+
+}
+
+.layer .a{
+    align-items: end;
+    justify-content: end;
+}
+.layer .b{
+    align-items: end;
+    justify-content: start;
+}
+.layer .c{
+    align-items: start;
+    justify-content: end;
+}
+.layer .d{
+    align-items: start;
+    justify-content: start;
+}
+.xline{
+    border-bottom: yellow 10px dashed;
+    width: 200%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
+.yline{
+    border-left: yellow 10px dashed;
+    height: 117%;
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+}
+.traffic-light-x{
+    /* width: fit-content;
+    height: fit-content; */
+    background-color: #000;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.traffic-light-y{
+    width: fit-content;
+    height: fit-content;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 10px;
+}
+.cicle{
+    background-color: #eee;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 8px;
+    transition: background-color 0.1s ease-in;
+
+}
+
+.red { background-color: red; }
+.yellow { background-color: yellow; }
+.green { background-color: #00ff00; }
+
+.timer{
+    font-size: 2rem;
+    border: 2px black solid;
+    border-radius: 10px;
+    padding: 4px 20px;
+    margin: 8px 20px;
+    display: none;
+}
+
+.layer button{
+    font-size: 1.2rem;
+    /* border: 2px black solid; */
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin: 12px 20px;
+    cursor: pointer;
+    /* outline: none; */
+}
+
+#playBtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#moving-image {
+    position: absolute;
+    /* top: 0%; */
+    left: 0;
+    transform: translateY(-20%);
+    transition: left 6s linear; 
+  }
