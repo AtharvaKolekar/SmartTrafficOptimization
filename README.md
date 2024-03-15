@@ -18,5 +18,5 @@ We have utilized the YOLO (You Only Look Once) model for object detection in the
 4. **Thresholding**: Set appropriate confidence thresholds for detecting emergency vehicles.
 5. **Integration**: Integrate the YOLO model with the rest of the project for real-time analysis of camera footage.
 
-![YOLO Model](![ambulance](https://github.com/AtharvaKolekar/SmartTrafficOptimization/assets/121168949/03c3e313-5d65-481c-acb6-f6703574207e)
-)
+![ambulance](https://github.com/AtharvaKolekar/SmartTrafficOptimization/assets/121168949/617a3311-aaaf-459c-8660-fbf9a9b3943f)
+
