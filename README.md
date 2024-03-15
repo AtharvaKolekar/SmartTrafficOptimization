@@ -33,3 +33,8 @@ The Android application is developed in Kotlin and serves as an interface for mo
 4. **Build and Run**: Build the project and run it on an Android device or emulator.
 5. **Interface**: Navigate through the interface to monitor emergency vehicle locations and receive alerts.
 
+## Contributors
+- Atharva Kolekar
+- Munir Siddhique
+- Sanjay 
+-Krishna Agrawal
