@@ -37,4 +37,4 @@ The Android application is developed in Kotlin and serves as an interface for mo
 - Atharva Kolekar
 - Munir Siddhique
 - Sanjay 
--Krishna Agrawal
+- Krishna Agrawal
