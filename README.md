@@ -6,7 +6,7 @@ To visualize the functionality of the project, we have created a simulation. You
 ## Simulation
 To visualize the functionality of the project, we have created a simulation. 
 
-[![View Simulation](https://img.shields.io/badge/View%20Simulation-Click%20Here-blue)]((https://atharvakolekar.github.io/SmartTrafficOptimization/simulation/)]
+[![View Simulation]]((https://atharvakolekar.github.io/SmartTrafficOptimization/simulation/)]
 
 ## Steps for ESP32 Code
 
