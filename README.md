@@ -18,5 +18,15 @@ We have utilized the YOLO (You Only Look Once) model for object detection in the
 4. **Thresholding**: Set appropriate confidence thresholds for detecting emergency vehicles.
 5. **Integration**: Integrate the YOLO model with the rest of the project for real-time analysis of camera footage.
 
-![ambulance](https://github.com/AtharvaKolekar/SmartTrafficOptimization/assets/121168949/617a3311-aaaf-459c-8660-fbf9a9b3943f)
+<img width="310" alt="image" src="https://github.com/AtharvaKolekar/SmartTrafficOptimization/assets/121168949/c7a726db-768d-4e60-9e15-a6ef04b52950">
+
+## Android Code (Kotlin)
+
+The Android application is developed in Kotlin and serves as an interface for monitoring the status of emergency vehicles and receiving alerts. Below are the steps for using the Android code:
+
+1. **Setup Android Studio**: Ensure that you have Android Studio installed.
+2. **Clone Repository**: Clone the repository containing the Android code.
+3. **Open Project**: Open the project in Android Studio.
+4. **Build and Run**: Build the project and run it on an Android device or emulator.
+5. **Interface**: Navigate through the interface to monitor emergency vehicle locations and receive alerts.
 
