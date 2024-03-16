@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+  background: #111;
+  color: #f6f6f6;
+}
+
+button,
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+
+button:focus {
+  outline: none;
+}
