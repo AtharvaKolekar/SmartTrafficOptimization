@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map with Nearest Road</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.css">
+    <!-- Leaflet Routing Machine JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.js"></script>
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;">
+    <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-580px, 0px, 0px);">
+        <div class="leaflet-pane leaflet-tile-pane">
+            <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+                <div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);">
+                    <!-- Tile images -->
+                </div>
+            </div>
+        </div>
+        <div class="leaflet-pane leaflet-shadow-pane">
+            <!-- Marker shadows -->
+        </div>
+        <div class="leaflet-pane leaflet-overlay-pane">
+            <!-- Routing paths -->
+        </div>
+        <div class="leaflet-pane leaflet-marker-pane">
+            <!-- Markers -->
+        </div>
+        <div class="leaflet-pane leaflet-tooltip-pane"></div>
+        <div class="leaflet-pane leaflet-popup-pane"></div>
+        <div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(46149.5px, 29156px, 0px) scale(128);"></div>
+    </div>
+    <div class="leaflet-control-container">
+        <!-- Zoom controls -->
+    </div>
+    <div class="leaflet-bottom leaflet-left"></div>
+    <div class="leaflet-bottom leaflet-right">
+        <div class="leaflet-control-attribution leaflet-control">
+            <!-- Map attribution -->
+        </div>
+    </div>
+</div>
+
+<script>
+    // Initialize Leaflet map
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Example coordinates (you can replace these with your own)
+    var coordinates = [
+        [18.89, 73.17],
+        [20, 74]
+    ];
+
+    // Add markers for each set of coordinates
+    coordinates.forEach(coords => {
+        L.marker(coords).addTo(map)
+            .bindPopup('Coordinates: ' + coords[0] + ', ' + coords[1]);
+    });
+
+    // Create a control for routing
+    var control = L.Routing.control({
+        waypoints: coordinates.map(coord => L.latLng(coord[0], coord[1])),
+        routeWhileDragging: true
+    }).addTo(map);
+</script>
+</body>
+</html>
